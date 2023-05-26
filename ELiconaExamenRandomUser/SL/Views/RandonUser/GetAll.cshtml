@@ -1,0 +1,79 @@
+﻿
+@{
+    ViewBag.Title = "GetAll";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GetAll</h2>
+
+<section>
+
+    @*<div style="float:left;">
+        <div class="row">
+            @Html.ActionLink("Actualizar", "Form", "Producto", htmlAttributes: new { @class = "btn btn-success bi bi-person-plus-fill" })
+        </div>
+    </div>
+
+    <div style="float: left;">
+        <div class="row">
+            @Html.ActionLink("Limpiar", "Form", "Producto", htmlAttributes: new { @class = "btn btn-danger bi bi-person-plus-fill" })
+        </div>
+    </div>*@
+
+
+    <button class="btn-success" onclick="GetUser()">Agregar</bUtton>
+    <button class="btn-danger" onclick="LimpiarUser()">Limpiar</bUtton>
+
+
+</section>
+
+
+
+        <section>
+            <table class="table table-bordered table-responsive" id="tblUsuario">
+                <thead class="bg-success">
+                    <tr>
+                     
+                        <th class="text-center" style=" font-weight:bold;">Nombre</th>
+                        <th class="text-center" style=" font-weight:bold;">Correo Electronico</th>
+                        <th class="text-center" style=" font-weight:bold;">Direccion</th>
+                        <th class="text-center" style=" font-weight:bold;">Genero</th>
+                        <th class="text-center" style=" font-weight:bold;">Foto</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </section>
+
+<script type="text/javascript">
+    function GetUser(){
+        $.ajax({
+            type: 'Get',
+            url: 'https://randomuser.me/api/',
+            datetype: 'json',
+            success: function (result) {
+                var htmlTags = '<tr>' +
+                    '<td>' + result.results[0].name.first + '<td>' +
+                    '<td>' + result.results[0].email + '<td>' +
+                    '<td>' + result.results[0].location.city + '<td>' +
+                    '<td>' + result.results[0].gender + '<td>' +
+                    '<td>' + '<img src=' + result.results[0].picture.large + '"style=height:50px;width:50px;" />' + '<td>' +
+
+                    '</tr>';
+                $('#tblUsuario tbody').append(htmlTags);
+
+
+            },
+            error: function (ex) {
+                alert('Failed' + ex);
+            }
+        });
+    }
+    function LimpiarUser() {
+        $('#tblUsuario tbody').empty();
+    }
+
+</script>
