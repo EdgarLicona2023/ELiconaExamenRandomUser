@@ -1,0 +1,11 @@
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaExamenDrinks\BL\bin\Debug\BL.dll
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaExamenDrinks\BL\bin\Debug\BL.pdb
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaExamenDrinks\BL\bin\Debug\ML.dll
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaExamenDrinks\BL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaExamenDrinks\BL\bin\Debug\ML.pdb
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaExamenDrinks\BL\bin\Debug\Newtonsoft.Json.xml
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaExamenDrinks\BL\obj\Debug\BL.csproj.AssemblyReference.cache
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaExamenDrinks\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaExamenDrinks\BL\obj\Debug\BL.csproj.CopyComplete
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaExamenDrinks\BL\obj\Debug\BL.dll
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaExamenDrinks\BL\obj\Debug\BL.pdb

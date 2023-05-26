@@ -4,7 +4,7 @@ namespace ELiconaExamenCocktail.Controllers
 {
     public class CocktailController : Controller
     {
-        public IActionResult Index()
+        public ActionResult Index()
         {
             return View();
         }
