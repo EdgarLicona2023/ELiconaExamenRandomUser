@@ -11,7 +11,6 @@ namespace BL
     {
         public static ML.Result GetName(string nombre)
         {
-            // ML.Eat ea = new ML.Eat();
             ML.Result resulteat = new ML.Result();
 
             using (var client = new HttpClient())

@@ -1,3 +1,11 @@
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaExamenDrinks\WebApplication2\obj\Debug\net7.0\PL.csproj.AssemblyReference.cache
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaExamenDrinks\WebApplication2\obj\Debug\net7.0\PL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaExamenDrinks\WebApplication2\obj\Debug\net7.0\PL.AssemblyInfoInputs.cache
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaExamenDrinks\WebApplication2\obj\Debug\net7.0\PL.AssemblyInfo.cs
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaExamenDrinks\WebApplication2\obj\Debug\net7.0\PL.csproj.CoreCompileInputs.cache
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaExamenDrinks\WebApplication2\obj\Debug\net7.0\PL.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaExamenDrinks\WebApplication2\obj\Debug\net7.0\PL.RazorAssemblyInfo.cache
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaExamenDrinks\WebApplication2\obj\Debug\net7.0\PL.RazorAssemblyInfo.cs
 C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaExamenDrinks\WebApplication2\bin\Debug\net7.0\appsettings.Development.json
 C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaExamenDrinks\WebApplication2\bin\Debug\net7.0\appsettings.json
 C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaExamenDrinks\WebApplication2\bin\Debug\net7.0\PL.staticwebassets.runtime.json
@@ -225,14 +233,6 @@ C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaExamenDri
 C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaExamenDrinks\WebApplication2\bin\Debug\net7.0\ML.dll
 C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaExamenDrinks\WebApplication2\bin\Debug\net7.0\BL.pdb
 C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaExamenDrinks\WebApplication2\bin\Debug\net7.0\ML.pdb
-C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaExamenDrinks\WebApplication2\obj\Debug\net7.0\PL.csproj.AssemblyReference.cache
-C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaExamenDrinks\WebApplication2\obj\Debug\net7.0\PL.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaExamenDrinks\WebApplication2\obj\Debug\net7.0\PL.AssemblyInfoInputs.cache
-C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaExamenDrinks\WebApplication2\obj\Debug\net7.0\PL.AssemblyInfo.cs
-C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaExamenDrinks\WebApplication2\obj\Debug\net7.0\PL.csproj.CoreCompileInputs.cache
-C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaExamenDrinks\WebApplication2\obj\Debug\net7.0\PL.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaExamenDrinks\WebApplication2\obj\Debug\net7.0\PL.RazorAssemblyInfo.cache
-C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaExamenDrinks\WebApplication2\obj\Debug\net7.0\PL.RazorAssemblyInfo.cs
 C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaExamenDrinks\WebApplication2\obj\Debug\net7.0\staticwebassets\msbuild.PL.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaExamenDrinks\WebApplication2\obj\Debug\net7.0\staticwebassets\msbuild.build.PL.props
 C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaExamenDrinks\WebApplication2\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.PL.props

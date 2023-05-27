@@ -12,114 +12,47 @@ namespace PL.Controllers
         //}
 
 
-
         [HttpGet]
-        public ActionResult GetName((string nombre)
+        public ActionResult GeAll(string nombre)
         {
-            ML.Result resulteat = new ML.Result();
+            //ML.Result resulta = new ML.Result();
+            //resulta.Objects = new List<object>();
+
+            ML.Drink resultAlumnos = new ML.Drink();
+            resultAlumnos.Drinks = new List<object>();
+
+            //string urlApi = System.Configuration.ConfigurationManager.AppSettings["WebApi"];
 
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + nombre);
-                var respomseTask = client.GetAsync("");
-                respomseTask.Wait();
+                //client.BaseAddress = new Uri(urlApi);
 
-                var results = respomseTask.Result;
-                if (results.IsSuccessStatusCode)
-                {
-                    var ReadTask = results.Content.ReadAsStringAsync();
-                    ML.Root arrayEat = Newtonsoft.Json.JsonConvert.DeserializeObject<ML.Root>(ReadTask.Result);
-
-                    resulteat.Objects = new List<object>();
-                    foreach (var recorrer in arrayEat.drinks)
-                    {
-                        ML.Result result1 = GetByID(recorrer.idDrink);
-
-                        resulteat.Objects.Add(result1.Object);
-                    }
-
-
-                    resulteat.Correct = true;
-                    return resulteat;
-
-                }
-                else
-                {
-                    Console.WriteLine("Error");
-                    return null;
-                }
-            }
-        }
-
-
-        [HttpGet]
-        public ActionResult GetByIngrediente(string Ingrediente)
-        {
-            ML.Result resulteats = new ML.Result();
-
-
-            using (var client = new HttpClient())
-            {
-                client.BaseAddress = new Uri("http://www.thecocktaildb.com/api/");
-                var responseTask = client.GetAsync("json/v1/1/filter.php?i=" + Ingrediente);
-                responseTask.Wait();
+                var responseTask = client.GetAsync("");
+                responseTask.Wait(); //esperar a que se resuelva la llamada al servicio
 
                 var result = responseTask.Result;
+
                 if (result.IsSuccessStatusCode)
                 {
-                    var ReadResponse = result.Content.ReadAsStringAsync();
-                    ML.Root arraymenu = Newtonsoft.Json.JsonConvert.DeserializeObject<ML.Root>(ReadResponse.Result); ;
+                    var readTask = result.Content.ReadAsStringAsync();
+                    readTask.Wait();
 
-                    resulteats.Objects = new List<object>();
-                    foreach (var recorrer in arraymenu.drinks)
+                    foreach (var resultItem in readTask.Result)
                     {
-                        ML.Result result1 = GetByID(recorrer.idDrink);
+                        //ML.Producto resultItemList = Newtonsoft.Json.JsonConvert.DeserializeObject<ML.Producto>(resultItem.ToString());
+                        //resulta.Objects.Add(resultItemList);
 
-                        resulteats.Objects.Add(result1.Object);
+
+                        ML.Drink resultItemList = Newtonsoft.Json.JsonConvert.DeserializeObject<ML.Drink>(resultItem.ToString());
+                        resultAlumnos.Drinks.Add(resultItemList);
                     }
-
-
-                    resulteats.Correct = true;
-                    return resulteats;
-
-
-                }
-                else
-                {
-                    return null;
                 }
             }
-        }
+          
+            return View(resultAlumnos);
+            //return View(resultAlumnos);
 
-
-        [HttpGet] ActionResult GetByID(string Ingrediente)
-        {
-            ML.Result result1 = new ML.Result();
-
-            using (var client = new HttpClient())
-            {
-                client.BaseAddress = new Uri("http://www.thecocktaildb.com/api/");
-                var responseTask = client.GetAsync("json/v1/1/lookup.php?i=" + Ingrediente);
-                responseTask.Wait();
-
-                var result = responseTask.Result;
-                if (result.IsSuccessStatusCode)
-                {
-                    var ReadResponse = result.Content.ReadAsStringAsync();
-                    ML.Root arraymenu = Newtonsoft.Json.JsonConvert.DeserializeObject<ML.Root>(ReadResponse.Result); ;
-
-                    ML.Drink nombre = arraymenu.drinks[0];
-                    result1.Object = nombre;
-                    result1.Correct = true;
-
-                    return result1;
-                }
-                else
-                {
-                    return null;
-                }
-
-            }
         }
     }
 }

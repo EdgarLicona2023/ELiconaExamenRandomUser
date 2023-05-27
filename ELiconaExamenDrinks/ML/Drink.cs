@@ -14,7 +14,7 @@ namespace ML
         public StrMeasure strMeasure { set; get; }
         public string strCategory { set; get; }
         public string strInstructions { set; get; }
-
+        public List<object> Drinks { get; set; }
 
 
         public object strDrinkAlternate { get; set; }
