@@ -91,7 +91,17 @@ namespace PL.Controllers
 
                         //ML.Drink resultItemList = Newtonsoft.Json.JsonConvert.DeserializeObject<ML.Drink>(resultItem.ToString());
                         ML.Drink resultItemList = new ML.Drink();
+                        resultItemList.idDrink = resultItem.idDrink;  
                         resultItemList.strDrink = resultItem.strDrink;  
+                        resultItemList.strCategory = resultItem.strCategory;  
+                        resultItemList.strInstructions = resultItem.strInstructions;  
+                        resultItemList.strDrinkAlternate = resultItem.strDrinkAlternate;  
+                        resultItemList.strIBA = resultItem.strIBA;  
+                        resultItemList.strAlcoholic = resultItem.strAlcoholic;  
+                        resultItemList.strGlass = resultItem.strGlass;  
+                        resultItemList.strTags = resultItem.strTags;  
+                        resultItemList.strImageSource = resultItem.strImageSource;  
+
                         resultdrink.Objects.Add(resultItemList);
                     }
                 }
