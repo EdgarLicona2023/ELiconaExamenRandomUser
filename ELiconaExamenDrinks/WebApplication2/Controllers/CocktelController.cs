@@ -95,7 +95,7 @@ namespace PL.Controllers
                         resultItemList.strDrink = resultItem.strDrink;  
                         resultItemList.strCategory = resultItem.strCategory;  
                         resultItemList.strInstructions = resultItem.strInstructions;  
-                        resultItemList.strDrinkAlternate = resultItem.strDrinkAlternate;  
+                        //resultItemList.strDrinkAlternate = resultItem.strDrinkAlternate;  
                         resultItemList.strIBA = resultItem.strIBA;  
                         resultItemList.strAlcoholic = resultItem.strAlcoholic;  
                         resultItemList.strGlass = resultItem.strGlass;  
@@ -106,9 +106,11 @@ namespace PL.Controllers
                     }
                 }
             }
+            ML.Drink drink = new ML.Drink();
 
-            return View(resultdrink);
-            //return View(resultAlumnos);
+            drink.Drinks = resultdrink.Objects;
+
+            return View(drink);
 
         }
     }
