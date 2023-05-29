@@ -11,8 +11,38 @@
         <p>
             Catalogo de los mejores cockteles 
         </p>
+
+     
     </section>
-  
+    @using (Html.BeginForm("GeAll", "Cocktel", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+
+    <section>
+
+    <div class="row">
+        <div class="col-md-3">
+@*            @Html.LabelFor(model => model.strDrink)
+*@            
+                @Html.Label("", "Buscar Por Nombre")
+
+                @Html.TextBoxFor(model => model.strDrink, new { @class = "form-control", @id = "txtstrDrink" })
+
+                @Html.ValidationMessageFor(model => model.strDrink)
+
+        </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col">
+                <input type="submit" value="Buscar" class="btn btn-primary " />
+            </div>
+        </div>
+
+
+    </section>
+
+  }
     <section>
         @if (Model.Drinks == null)
         {
@@ -25,17 +55,14 @@
         else
         {
 
-
-            <table class="table table-bordered table-responsive">
+          @*  <table class="table table-bordered table-responsive">
                 <thead>
                     <tr>
-
                         <td class="visually-hidden">idDrink</td>
                         <td class="text-center" style="font-weight:bold;">strDrink</td>
                         <td class="text-center" style=" font-weight:bold;">strCategory</td>
                         <td class="text-center" style=" font-weight:bold;">strInstructions</td>
-@*                        <td class="text-center" style=" font-weight:bold;">strDrinkAlternate</td>
-*@                        <td class="text-center" style=" font-weight:bold;">strIBA</td>
+                        <td class="text-center" style=" font-weight:bold;">strIBA</td>
                         <td class="text-center" style=" font-weight:bold;">strAlcoholic</td>
                         <td class="text-center" style=" font-weight:bold;">strGlass</td>
                         <td class="text-center" style=" font-weight:bold;">strTags</td>
@@ -52,19 +79,65 @@
                             <td class="text-center">@drink.strDrink</td>
                             <td class="text-center">@drink.strCategory</td>
                             <td class="text-center">@drink.strInstructions</td>
-@*                            <td class="text-center">@drink.strDrinkAlternate</td>
-*@                          <td class="text-center">@drink.strIBA</td>
+                            <td class="text-center">@drink.strIBA</td>
                             <td class="text-center">@drink.strAlcoholic</td>
                             <td class="text-center">@drink.strGlass</td>
                             <td class="text-center">@drink.strTags</td>
-                            <td class="text-center">@drink.strImageSource</td>
-                      
-
-
-                        </tr>
+                            <td> <img src="@drink.strDrinkThum" style="width:200px;height:300px"> </td>
+                          @*  2304 x 3456*@
+                @*        </tr>
                     }
                 </tbody>
-            </table>
+            </table>*@
+
+
+
+
+            <div class="row">
+                @foreach (ML.Drink drink in Model.Drinks)
+                {
+
+                    <div class="card text-white  bg-dark border-success mb-3 border-4" style="width: 18rem;">
+                        @if (drink.strDrinkThumb == null@* || libro.Portada == " "*@)
+                        {
+                            <img src="/images/PSI.png" width="250px" height="250px" />
+                        }
+                        else
+                        {
+                            <img id="Img" src="@drink.strDrinkThumb" style="width:250px ; height:250px" />
+                        }
+                        <div class="card-body">
+                            <h5 class="card-title">@drink.strDrink</h5>
+                            <p class="card-text">Category:@drink.strCategory</p>
+                            <p class="card-text">Instructions: @drink.strInstructions</p>
+                            <p class="card-text">IBA: @drink.strIBA</p>
+                            <p class="card-text">Alcoholic: @drink.strAlcoholic</p>
+                            <p class="card-text">Glass: @drink.strGlass</p>
+                            <p class="card-text">Tags: @drink.strTags</p>
+                            <p class="card-text">Ingredient 1: @drink.strIngredient1 // Porcion 1: @drink.strMeasure1</p>
+                            <p class="card-text">Ingredient 2: @drink.strIngredient1 // Porcion 1: @drink.strMeasure2</p>
+                            <p class="card-text">Ingredient 3: @drink.strIngredient1 // Porcion 1: @drink.strMeasure3</p>
+                            <p class="card-text">Ingredient 4: @drink.strIngredient1 // Porcion 1: @drink.strMeasure4</p>
+                            <p class="card-text">Ingredient 5: @drink.strIngredient1 // Porcion 1: @drink.strMeasure5</p>
+                            <p class="card-text">Ingredient 6: @drink.strIngredient1 // Porcion 1: @drink.strMeasure6</p>
+                            <p class="card-text">Ingredient 7: @drink.strIngredient1 // Porcion 1: @drink.strMeasure7</p>
+                            <p class="card-text">Ingredient 8: @drink.strIngredient1 // Porcion 1: @drink.strMeasure8</p>
+                            <p class="card-text">Ingredient 9: @drink.strIngredient1 // Porcion 1: @drink.strMeasure9</p>
+                            <p class="card-text">Ingredient 10: @drink.strIngredient1 // Porcion 1: @drink.strMeasure10</p>
+
+
+
+                           @* <a href="@Url.Action("Form", "Libro", new { idDrink = drink.idDrink })" class="btn btn-primary">Modificar</a>
+                            <a class="btn btn-danger bi bi-trash" href="@Url.Action("Delete", "Libro", new { idDrink = drink.idDrink})" onclick="return confirm('Estas seguro que deseas eliminar este registro?');">Eliminar</a>
+
+*@
+                        </div>
+                    </div>
+                }
+            </div>
+
+
+
 
         }
 
