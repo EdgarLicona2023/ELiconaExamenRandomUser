@@ -15,6 +15,7 @@ namespace ML
         public string strCategory { set; get; }
         public string strInstructions { set; get; }
         public List<object> Drinks { get; set; }
+        public List<Drink> drinks { get; set; }
 
 
         public object strDrinkAlternate { get; set; }

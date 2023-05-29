@@ -15,8 +15,8 @@ namespace BL
 
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + nombre);
-                var respomseTask = client.GetAsync("");
+                client.BaseAddress = new Uri("https://www.thecocktaildb.com/api/");
+                var respomseTask = client.GetAsync("json/v1/1/search.php?s=" + nombre);
                 respomseTask.Wait();
 
                 var results = respomseTask.Result;
