@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ELiconaCrudAjaxModelStoreContainer" CdmEntityContainer="ELiconaCrudAjaxEntities">
+    <EntitySetMapping Name="Empleadoes">
+      <EntityTypeMapping TypeName="ELiconaCrudAjaxModel.Empleado">
+        <MappingFragment StoreEntitySet="Empleado">
+          <ScalarProperty Name="IdEmpleado" ColumnName="IdEmpleado" />
+          <ScalarProperty Name="NumeroNomina" ColumnName="NumeroNomina" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
+          <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Estadoes">
+      <EntityTypeMapping TypeName="ELiconaCrudAjaxModel.Estado">
+        <MappingFragment StoreEntitySet="Estado">
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+          <ScalarProperty Name="Estado1" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="EmpleadoAdd" FunctionName="ELiconaCrudAjaxModel.Store.EmpleadoAdd" />
+    <FunctionImportMapping FunctionImportName="EmpleadoDelete" FunctionName="ELiconaCrudAjaxModel.Store.EmpleadoDelete" />
+    <FunctionImportMapping FunctionImportName="EmpleadoGetAll" FunctionName="ELiconaCrudAjaxModel.Store.EmpleadoGetAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ELiconaCrudAjaxModel.EmpleadoGetAll_Result">
+          <ScalarProperty Name="IdEmpleado" ColumnName="IdEmpleado" />
+          <ScalarProperty Name="NumeroNomina" ColumnName="NumeroNomina" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
+          <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="EmpleadoGetById" FunctionName="ELiconaCrudAjaxModel.Store.EmpleadoGetById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ELiconaCrudAjaxModel.EmpleadoGetById_Result">
+          <ScalarProperty Name="IdEmpleado" ColumnName="IdEmpleado" />
+          <ScalarProperty Name="NumeroNomina" ColumnName="NumeroNomina" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
+          <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="EmpleadoUpdate" FunctionName="ELiconaCrudAjaxModel.Store.EmpleadoUpdate" />
+    <FunctionImportMapping FunctionImportName="EstadoGetAll" FunctionName="ELiconaCrudAjaxModel.Store.EstadoGetAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ELiconaCrudAjaxModel.EstadoGetAll_Result">
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

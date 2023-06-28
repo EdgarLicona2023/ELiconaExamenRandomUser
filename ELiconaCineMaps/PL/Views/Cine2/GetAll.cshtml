@@ -1,0 +1,75 @@
+﻿
+@model ML.Cine2
+@{
+    ViewData["Title"] = "GetAll";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Cines</h1>
+
+<div class="container">
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <h5>Listado de Cines</h5>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div style="float:right">
+        @Html.ActionLink("Agregar", "Form", "Cine2", htmlAttributes: new { @class = "btn btn-success" })
+    </div>
+
+
+
+    <table class="table table-bordered table-responsive">
+        <thead>
+            <tr>
+                <td>Editar</td>
+            @*    <td class="visually-hidden">IdCine</td>
+                <td class="visually-hidden">IdZona</td>*@
+               
+                <td>Nombre Zona</td>
+                <td>Cine</td>
+                <td>Direccion</td>
+                <td>Venta</td>
+               
+
+                <td>Latitud</td>
+                <td>Longitud</td>
+
+                <td>Eliminar</td>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (ML.Cine2 cine in Model.Cines)
+            {
+                <tr>
+                    <td class="text-center"><a class="btn btn-warning glyphicon glyphicon-edit" href="@Url.Action("Form", "Cine2", new { IdCine = cine.IdCine })"></a></td>
+
+
+                   @* <td class="hidden">@cine.IdCine</td>
+                    <td class="hidden">@cine.Zona.IdZona</td>*@
+
+                 
+                    <td>@cine.Zona.NombreZona</td>
+                    <td>@cine.NombreCine</td>
+                    <td>@cine.Direccion</td>
+                    <td>@cine.Ventas</td>
+                   
+
+                    <td>@cine.Latitud</td>
+                    <td>@cine.Longitud</td>
+
+@*                    <td class="text-center"><a class="btn btn-danger glyphicon glyphicon-trash" href="@Url.Action("Delete", "Cine2", new { IdCine = cine.IdCine})" onclick="return confirm('Estas seguro que deseas eliminar este registro?');"></a></td>
+*@                    <td class="text-center"><a class="btn btn-danger bi bi-trash" href="@Url.Action("Delete", "Cine2", new { IdCine = cine.IdCine})" onclick="return confirm('Estas seguro que deseas eliminar este registro?');"></a></td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

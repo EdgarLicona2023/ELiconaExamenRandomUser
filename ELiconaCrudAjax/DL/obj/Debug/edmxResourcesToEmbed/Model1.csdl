@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ELiconaCrudAjaxModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Empleado">
+    <Key>
+      <PropertyRef Name="IdEmpleado" />
+    </Key>
+    <Property Name="IdEmpleado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NumeroNomina" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ApellidoPaterno" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ApellidoMaterno" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdEstado" Type="Int32" />
+    <NavigationProperty Name="Estado" Relationship="Self.FK__Empleado__IdEsta__1273C1CD" FromRole="Empleado" ToRole="Estado" />
+  </EntityType>
+  <EntityType Name="Estado">
+    <Key>
+      <PropertyRef Name="IdEstado" />
+    </Key>
+    <Property Name="IdEstado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Estado1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Empleadoes" Relationship="Self.FK__Empleado__IdEsta__1273C1CD" FromRole="Estado" ToRole="Empleado" />
+  </EntityType>
+  <Association Name="FK__Empleado__IdEsta__1273C1CD">
+    <End Role="Estado" Type="Self.Estado" Multiplicity="0..1" />
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Empleado">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ELiconaCrudAjaxEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Empleadoes" EntityType="Self.Empleado" />
+    <EntitySet Name="Estadoes" EntityType="Self.Estado" />
+    <AssociationSet Name="FK__Empleado__IdEsta__1273C1CD" Association="Self.FK__Empleado__IdEsta__1273C1CD">
+      <End Role="Estado" EntitySet="Estadoes" />
+      <End Role="Empleado" EntitySet="Empleadoes" />
+    </AssociationSet>
+    <FunctionImport Name="EmpleadoAdd">
+      <Parameter Name="NumeroNomina" Mode="In" Type="String" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="ApellidoPaterno" Mode="In" Type="String" />
+      <Parameter Name="ApellidoMaterno" Mode="In" Type="String" />
+      <Parameter Name="IdEstado" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="EmpleadoDelete">
+      <Parameter Name="IdEmpleado" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="EmpleadoGetAll" ReturnType="Collection(ELiconaCrudAjaxModel.EmpleadoGetAll_Result)" />
+    <FunctionImport Name="EmpleadoGetById" ReturnType="Collection(ELiconaCrudAjaxModel.EmpleadoGetById_Result)">
+      <Parameter Name="IdEmpleado" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="EmpleadoUpdate">
+      <Parameter Name="IdEmpleado" Mode="In" Type="Int32" />
+      <Parameter Name="NumeroNomina" Mode="In" Type="String" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="ApellidoPaterno" Mode="In" Type="String" />
+      <Parameter Name="ApellidoMaterno" Mode="In" Type="String" />
+      <Parameter Name="IdEstado" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="EstadoGetAll" ReturnType="Collection(ELiconaCrudAjaxModel.EstadoGetAll_Result)" />
+  </EntityContainer>
+  <ComplexType Name="EmpleadoGetAll_Result">
+    <Property Type="Int32" Name="IdEmpleado" Nullable="false" />
+    <Property Type="String" Name="NumeroNomina" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="ApellidoPaterno" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="ApellidoMaterno" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="IdEstado" Nullable="true" />
+    <Property Type="String" Name="Estado" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="EmpleadoGetById_Result">
+    <Property Type="Int32" Name="IdEmpleado" Nullable="false" />
+    <Property Type="String" Name="NumeroNomina" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="ApellidoPaterno" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="ApellidoMaterno" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="IdEstado" Nullable="true" />
+    <Property Type="String" Name="Estado" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="EstadoGetAll_Result">
+    <Property Type="Int32" Name="IdEstado" Nullable="false" />
+    <Property Type="String" Name="Estado" Nullable="false" MaxLength="100" />
+  </ComplexType>
+</Schema>

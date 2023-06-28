@@ -1,0 +1,101 @@
+﻿
+@model ML.Login
+@{
+    ViewData["Title"] = "Form";
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Welcome</title>
+    <link rel="stylesheet" href="/css/Login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <label>Registro</label>
+</head>
+
+<body>
+
+
+    <section class="h-100 gradient-form" style="background-color: #eee;">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-xl-10">
+                    <div class="card rounded-3 text-black">
+                        <div class="row g-0">
+                            <div class="col-lg-6">
+                                <div class="card-body p-md-5 mx-md-4">
+
+                                    <div class="text-center">
+                                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
+                                             style="width: 185px;" alt="logo">
+                                        <h4 class="mt-1 mb-5 pb-1">Captura los siguientes datos</h4>
+                                    </div>
+
+                                    @using (Html.BeginForm("Form", "Login", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                                    {
+                                        <form>
+                                            <p></p>
+
+                                            <div class="form-outline mb-4">
+                                                <input type="text" id="form2Example11" name="Nombre" class="form-control" placeholder="Nombre Completo" required="" />
+                                                <label class="form-label" for="form2Example11">Nombre</label>
+                                            </div>
+
+                                            <div class="form-outline mb-4">
+                                                <input type="text" id="form2Example22" name="Telefono" class="form-control" placeholder="Numero" required="" />
+                                                <label class="form-label" for="form2Example22">Telefono</label>
+                                            </div>
+
+                                            <div class="form-outline mb-4">
+                                                <input type="email" id="form2Example22" name="Correo" class="form-control" placeholder="E-mail" required="" />
+                                                <label class="form-label" for="form2Example22">Correo</label>
+                                            </div>
+                                            <div class="form-outline mb-4">
+                                                <input type="text" id="form2Example22" name="Empresa" class="form-control" placeholder="Empresa" required="" />
+                                                <label class="form-label" for="form2Example22">Empresa</label>
+                                            </div>
+
+                                            @*<div class="form-outline mb-4">
+                                        <input type="password" id="form2Example22" name="Password" class="form-control" placeholder="Contraseña" required=""/>
+                                        <label class="form-label" for="form2Example22">Password</label>
+                                        </div>*@
+
+                                            <div class="text-center pt-1 mb-5 pb-1">
+                                                <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit" href="/Login/Login">Guardar</button>
+                                                @*    <a class="text-muted" href="/Login/Login">Forgot password?</a>*@
+                                            </div>
+
+                                            @* <div class="d-flex align-items-center justify-content-center pb-4">
+                                        <p class="mb-0 me-2">Don't have an account?</p>
+                                        <button type="button" class="btn btn-outline-danger">Create new</button>
+                                        </div>*@
+
+
+                                        </form>
+                                    }
+
+
+
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                                <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                                    <h4 class="mb-4">Sé parte de nuestra comunidad</h4>
+                                    <h4 class="mb-4">Marketing y Comunicación</h4>
+                                    <p class="small mb-0">
+                                        Para información sobre alianzas, eventos,
+                                        patrocinios y prensa por favor contacta a:
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
+

@@ -1,0 +1,93 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = PL
+build_property.RootNamespace = PL
+build_property.ProjectDir = C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaCineMaps\PL\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaCineMaps\PL
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/digis/Documents/LiconaGrandeEdgarAlejandro/Repositorio/ELiconaCineMaps/PL/Views/Cine2/Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2luZTJcRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/digis/Documents/LiconaGrandeEdgarAlejandro/Repositorio/ELiconaCineMaps/PL/Views/Cine2/GetAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2luZTJcR2V0QWxsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/digis/Documents/LiconaGrandeEdgarAlejandro/Repositorio/ELiconaCineMaps/PL/Views/Cine2/Modal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2luZTJcTW9kYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/digis/Documents/LiconaGrandeEdgarAlejandro/Repositorio/ELiconaCineMaps/PL/Views/CineController1/GetFavorite.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2luZUNvbnRyb2xsZXIxXEdldEZhdm9yaXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/digis/Documents/LiconaGrandeEdgarAlejandro/Repositorio/ELiconaCineMaps/PL/Views/CineController1/GetPopular.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2luZUNvbnRyb2xsZXIxXEdldFBvcHVsYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/digis/Documents/LiconaGrandeEdgarAlejandro/Repositorio/ELiconaCineMaps/PL/Views/CineController1/Modal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2luZUNvbnRyb2xsZXIxXE1vZGFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/digis/Documents/LiconaGrandeEdgarAlejandro/Repositorio/ELiconaCineMaps/PL/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/digis/Documents/LiconaGrandeEdgarAlejandro/Repositorio/ELiconaCineMaps/PL/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/digis/Documents/LiconaGrandeEdgarAlejandro/Repositorio/ELiconaCineMaps/PL/Views/InformacionVenta/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5mb3JtYWNpb25WZW50YVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/digis/Documents/LiconaGrandeEdgarAlejandro/Repositorio/ELiconaCineMaps/PL/Views/Login/CambiarPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cQ2FtYmlhclBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/digis/Documents/LiconaGrandeEdgarAlejandro/Repositorio/ELiconaCineMaps/PL/Views/Login/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/digis/Documents/LiconaGrandeEdgarAlejandro/Repositorio/ELiconaCineMaps/PL/Views/Login/Modal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTW9kYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/digis/Documents/LiconaGrandeEdgarAlejandro/Repositorio/ELiconaCineMaps/PL/Views/Login/ModalLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTW9kYWxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/digis/Documents/LiconaGrandeEdgarAlejandro/Repositorio/ELiconaCineMaps/PL/Views/Login/NewPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTmV3UGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/digis/Documents/LiconaGrandeEdgarAlejandro/Repositorio/ELiconaCineMaps/PL/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/digis/Documents/LiconaGrandeEdgarAlejandro/Repositorio/ELiconaCineMaps/PL/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/digis/Documents/LiconaGrandeEdgarAlejandro/Repositorio/ELiconaCineMaps/PL/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/digis/Documents/LiconaGrandeEdgarAlejandro/Repositorio/ELiconaCineMaps/PL/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/digis/Documents/LiconaGrandeEdgarAlejandro/Repositorio/ELiconaCineMaps/PL/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-ykycstrbf1

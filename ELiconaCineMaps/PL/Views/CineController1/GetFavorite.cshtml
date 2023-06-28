@@ -1,0 +1,77 @@
+﻿@model ML.Cine
+@{
+    ViewData["Title"] = "GetFavorite";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <section>
+        <h2>Módulo Peliculas Favoritas</h2>
+        <p>
+            Catalogo de Peliculas Favoritas
+        </p>
+
+
+    </section>
+
+    <section>
+        @if (Model.Cines == null)
+        {
+            <div class="row">
+                <div class="alert alert-danger" role="alert">
+                    @ViewBag.Message
+                </div>
+
+            </div>
+        }
+        else
+        {
+
+
+
+            <div class="row">
+                @foreach (ML.Cine cine in Model.Cines)
+                {
+
+                    <div class="card text-white  bg-dark border-success mb-3 border-4" style="width: 18rem;">
+                        @if (cine.NombreCine == null@* || libro.Portada == " "*@)
+                        {
+                            <img src="/images/PSI.png" width="250px" height="250px" />
+                        }
+                        else
+                        {
+                            <img id="Img" src="@cine.Imagen" style="width:250px ; height:250px" />
+                        }
+                        <div class="card-body">
+                            <h5 class="card-title">@cine.NombreCine</h5>
+                            <p class="card-text">Descripcion:@cine.Descripcion</p>
+
+                           @* <input type="text" id="name" name="id" value="@cine.IdCine" style="display:none"/>
+                            <input type="submit" value="Quitar a Favoritos" class="btn btn-danger"/>*@
+
+
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                @Html.ActionLink("Quitar de Favoritos", "AddFavororite", "CineController1", htmlAttributes: new { @class = "btn btn-danger" })
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                }
+            </div>
+
+
+
+
+        }
+
+
+
+    </section>
+</div>
+

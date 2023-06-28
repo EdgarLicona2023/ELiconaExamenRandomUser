@@ -1,0 +1,14 @@
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\ELiconaCineMaps\DL_EF\bin\Debug\net7.0\DL_EF.deps.json
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\ELiconaCineMaps\DL_EF\bin\Debug\net7.0\DL_EF.runtimeconfig.json
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\ELiconaCineMaps\DL_EF\bin\Debug\net7.0\DL_EF.dll
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\ELiconaCineMaps\DL_EF\bin\Debug\net7.0\DL_EF.pdb
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\ELiconaCineMaps\DL_EF\obj\Debug\net7.0\DL_EF.csproj.AssemblyReference.cache
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\ELiconaCineMaps\DL_EF\obj\Debug\net7.0\DL_EF.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\ELiconaCineMaps\DL_EF\obj\Debug\net7.0\DL_EF.AssemblyInfoInputs.cache
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\ELiconaCineMaps\DL_EF\obj\Debug\net7.0\DL_EF.AssemblyInfo.cs
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\ELiconaCineMaps\DL_EF\obj\Debug\net7.0\DL_EF.csproj.CoreCompileInputs.cache
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\ELiconaCineMaps\DL_EF\obj\Debug\net7.0\DL_EF.dll
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\ELiconaCineMaps\DL_EF\obj\Debug\net7.0\refint\DL_EF.dll
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\ELiconaCineMaps\DL_EF\obj\Debug\net7.0\DL_EF.pdb
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\ELiconaCineMaps\DL_EF\obj\Debug\net7.0\DL_EF.genruntimeconfig.cache
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\ELiconaCineMaps\DL_EF\obj\Debug\net7.0\ref\DL_EF.dll

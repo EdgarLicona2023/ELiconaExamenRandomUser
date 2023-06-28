@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ELiconaCrudAjaxModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Empleado">
+    <Key>
+      <PropertyRef Name="IdEmpleado" />
+    </Key>
+    <Property Name="IdEmpleado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NumeroNomina" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ApellidoPaterno" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ApellidoMaterno" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="IdEstado" Type="int" />
+  </EntityType>
+  <EntityType Name="Estado">
+    <Key>
+      <PropertyRef Name="IdEstado" />
+    </Key>
+    <Property Name="IdEstado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Estado" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Empleado__IdEsta__1273C1CD">
+    <End Role="Estado" Type="Self.Estado" Multiplicity="0..1" />
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Empleado">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="EmpleadoAdd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NumeroNomina" Type="varchar" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="ApellidoPaterno" Type="varchar" Mode="In" />
+    <Parameter Name="ApellidoMaterno" Type="varchar" Mode="In" />
+    <Parameter Name="IdEstado" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EmpleadoDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdEmpleado" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EmpleadoGetAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="EmpleadoGetById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdEmpleado" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EmpleadoUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdEmpleado" Type="int" Mode="In" />
+    <Parameter Name="NumeroNomina" Type="varchar" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="ApellidoPaterno" Type="varchar" Mode="In" />
+    <Parameter Name="ApellidoMaterno" Type="varchar" Mode="In" />
+    <Parameter Name="IdEstado" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EstadoGetAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="ELiconaCrudAjaxModelStoreContainer">
+    <EntitySet Name="Empleado" EntityType="Self.Empleado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Estado" EntityType="Self.Estado" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Empleado__IdEsta__1273C1CD" Association="Self.FK__Empleado__IdEsta__1273C1CD">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Empleado" EntitySet="Empleado" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

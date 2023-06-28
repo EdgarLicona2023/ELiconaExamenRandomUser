@@ -1,0 +1,78 @@
+﻿@model ML.Cine
+@{
+    ViewData["Title"] = "GetPopular";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <section>
+        <h2>Módulo Peliculas</h2>
+        <p>
+            Catalogo de las Peliculas mas Populares
+        </p>
+
+
+    </section>
+
+    <section>
+        @if (Model.Cines == null)
+        {
+            <div class="row">
+                <div class="alert alert-danger" role="alert">
+                    @ViewBag.Message
+                </div>
+
+            </div>
+        }
+        else
+        {
+
+
+
+            <div class="row">
+                @foreach (ML.Cine cine in Model.Cines)
+                {
+
+                    <div class="card text-white  bg-dark border-success mb-3 border-4" style="width: 18rem;">
+                        @if (cine.NombreCine == null@* || libro.Portada == " "*@)
+                        {
+                            <img src="/images/PSI.png" width="250px" height="250px" />
+                        }
+                        else
+                        {
+                            <img id="Img" src="@cine.Imagen" style="width:250px ; height:250px" />
+                        }
+                        <div class="card-body">
+                            <h5 class="card-title">@cine.NombreCine</h5>
+                            <p class="card-text">Descripcion:@cine.Descripcion</p>
+                            <p class="card-text">Id:@cine.id</p>
+
+                            @using (Html.BeginForm("AddFavororite", "CineController1", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                            {
+
+                                <div class="row">
+                                    <div class="col">
+                                        @*<input type="submit" value="Guardar" class="btn btn-success" @cine.id/>*@
+                                        <input type="submit" value="Añadir a Favoritos" class="btn btn-success" name="@cine.id" />
+@*                                        @Html.ActionLink("Regresar", "GetAll", "Producto", htmlAttributes: new { @class = "btn btn-danger" })
+*@                                    </div>
+
+                                </div>
+
+                            }
+
+                        </div>
+
+                    </div>
+                }
+            </div>
+
+
+
+        }
+
+
+
+    </section>
+</div>
+
