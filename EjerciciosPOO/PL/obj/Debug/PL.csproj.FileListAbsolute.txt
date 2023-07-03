@@ -1,0 +1,10 @@
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\EjerciciosPOO\PL\bin\Debug\PL.exe.config
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\EjerciciosPOO\PL\bin\Debug\PL.exe
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\EjerciciosPOO\PL\bin\Debug\PL.pdb
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\EjerciciosPOO\PL\bin\Debug\BL.dll
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\EjerciciosPOO\PL\bin\Debug\BL.pdb
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\EjerciciosPOO\PL\obj\Debug\PL.csproj.AssemblyReference.cache
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\EjerciciosPOO\PL\obj\Debug\PL.csproj.CoreCompileInputs.cache
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\EjerciciosPOO\PL\obj\Debug\PL.csproj.CopyComplete
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\EjerciciosPOO\PL\obj\Debug\PL.exe
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\EjerciciosPOO\PL\obj\Debug\PL.pdb

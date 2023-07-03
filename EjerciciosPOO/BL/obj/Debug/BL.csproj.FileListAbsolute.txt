@@ -1,0 +1,6 @@
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\EjerciciosPOO\BL\bin\Debug\BL.dll
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\EjerciciosPOO\BL\bin\Debug\BL.pdb
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\EjerciciosPOO\BL\obj\Debug\BL.csproj.AssemblyReference.cache
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\EjerciciosPOO\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\EjerciciosPOO\BL\obj\Debug\BL.dll
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\EjerciciosPOO\BL\obj\Debug\BL.pdb
