@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ELiconaTelcelModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Departamento">
+    <Key>
+      <PropertyRef Name="IdDepartamento" />
+    </Key>
+    <Property Name="IdDepartamento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Empleado">
+    <Key>
+      <PropertyRef Name="IdEmpleado" />
+    </Key>
+    <Property Name="IdEmpleado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="50" />
+    <Property Name="IdPuesto" Type="int" />
+    <Property Name="IdDepartamento" Type="int" />
+  </EntityType>
+  <EntityType Name="Puesto">
+    <Key>
+      <PropertyRef Name="IdPuesto" />
+    </Key>
+    <Property Name="IdPuesto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'ELiconaTelcel.dbo.Vista_Empleado_Depa_Puesto' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="Vista_Empleado_Depa_Puesto">
+    <Key>
+      <PropertyRef Name="IdEmpleado" />
+      <PropertyRef Name="IdPuesto" />
+      <PropertyRef Name="IdDepartamento" />
+    </Key>
+    <Property Name="IdEmpleado" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="50" />
+    <Property Name="IdPuesto" Type="int" Nullable="false" />
+    <Property Name="DescripcionPuesto" Type="varchar" MaxLength="50" />
+    <Property Name="IdDepartamento" Type="int" Nullable="false" />
+    <Property Name="DescripcionDepartamento" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK__Empleado__IdDepa__2A4B4B5E">
+    <End Role="Departamento" Type="Self.Departamento" Multiplicity="0..1" />
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departamento">
+        <PropertyRef Name="IdDepartamento" />
+      </Principal>
+      <Dependent Role="Empleado">
+        <PropertyRef Name="IdDepartamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Empleado__IdPues__29572725">
+    <End Role="Puesto" Type="Self.Puesto" Multiplicity="0..1" />
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Puesto">
+        <PropertyRef Name="IdPuesto" />
+      </Principal>
+      <Dependent Role="Empleado">
+        <PropertyRef Name="IdPuesto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="AddEmpleado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="IdPuesto" Type="int" Mode="In" />
+    <Parameter Name="IdDepartamento" Type="int" Mode="In" />
+  </Function>
+  <Function Name="CoincidenciaNombre" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="DeleteEmpleado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdEmpleado" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetAllDepartamentos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetAllEmpleados" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetAllPuestos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="ELiconaTelcelModelStoreContainer">
+    <EntitySet Name="Departamento" EntityType="Self.Departamento" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Empleado" EntityType="Self.Empleado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Puesto" EntityType="Self.Puesto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vista_Empleado_Depa_Puesto" EntityType="Self.Vista_Empleado_Depa_Puesto" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Vista_Empleado_Depa_Puesto].[IdEmpleado] AS [IdEmpleado], 
+    [Vista_Empleado_Depa_Puesto].[Nombre] AS [Nombre], 
+    [Vista_Empleado_Depa_Puesto].[IdPuesto] AS [IdPuesto], 
+    [Vista_Empleado_Depa_Puesto].[DescripcionPuesto] AS [DescripcionPuesto], 
+    [Vista_Empleado_Depa_Puesto].[IdDepartamento] AS [IdDepartamento], 
+    [Vista_Empleado_Depa_Puesto].[DescripcionDepartamento] AS [DescripcionDepartamento]
+    FROM [dbo].[Vista_Empleado_Depa_Puesto] AS [Vista_Empleado_Depa_Puesto]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__Empleado__IdDepa__2A4B4B5E" Association="Self.FK__Empleado__IdDepa__2A4B4B5E">
+      <End Role="Departamento" EntitySet="Departamento" />
+      <End Role="Empleado" EntitySet="Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Empleado__IdPues__29572725" Association="Self.FK__Empleado__IdPues__29572725">
+      <End Role="Puesto" EntitySet="Puesto" />
+      <End Role="Empleado" EntitySet="Empleado" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

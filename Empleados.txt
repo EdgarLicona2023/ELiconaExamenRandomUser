@@ -1,0 +1,16 @@
+IdEmpleado,Nombre,IdPuesto,IdDepartamento
+,Alfredo Perez Torres,1,1
+,Fernando Gonzalez Jimenez,1,2
+,Luis Martinez Perez,1,3
+,Jose Robles Torres,2,2
+,Karla Garcia Higareda,2,3
+,Lorena Duran Castro,2,4
+,Jessica Ramírez Estrada,3,3
+,Jimena Zarate Velez,3,4
+,Daniel Garcia Buendia,3,5
+,Ruben Nunez Lopez,4,1
+,Jorge Franco Quiroz,4,3
+,Gloria Velazquez Perez,4,5
+,Wendy Salgado Olguin,5,2
+,Arturo Frias Robles,5,4
+,Francisco Torres Duran,5,1

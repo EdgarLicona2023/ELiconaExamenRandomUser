@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ELiconaTelcelModelStoreContainer" CdmEntityContainer="ELiconaTelcelEntities">
+    <EntitySetMapping Name="Departamentoes">
+      <EntityTypeMapping TypeName="ELiconaTelcelModel.Departamento">
+        <MappingFragment StoreEntitySet="Departamento">
+          <ScalarProperty Name="IdDepartamento" ColumnName="IdDepartamento" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Empleadoes">
+      <EntityTypeMapping TypeName="ELiconaTelcelModel.Empleado">
+        <MappingFragment StoreEntitySet="Empleado">
+          <ScalarProperty Name="IdEmpleado" ColumnName="IdEmpleado" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdPuesto" ColumnName="IdPuesto" />
+          <ScalarProperty Name="IdDepartamento" ColumnName="IdDepartamento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Puestoes">
+      <EntityTypeMapping TypeName="ELiconaTelcelModel.Puesto">
+        <MappingFragment StoreEntitySet="Puesto">
+          <ScalarProperty Name="IdPuesto" ColumnName="IdPuesto" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vista_Empleado_Depa_Puesto">
+      <EntityTypeMapping TypeName="ELiconaTelcelModel.Vista_Empleado_Depa_Puesto">
+        <MappingFragment StoreEntitySet="Vista_Empleado_Depa_Puesto">
+          <ScalarProperty Name="IdEmpleado" ColumnName="IdEmpleado" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdPuesto" ColumnName="IdPuesto" />
+          <ScalarProperty Name="DescripcionPuesto" ColumnName="DescripcionPuesto" />
+          <ScalarProperty Name="IdDepartamento" ColumnName="IdDepartamento" />
+          <ScalarProperty Name="DescripcionDepartamento" ColumnName="DescripcionDepartamento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="AddEmpleado" FunctionName="ELiconaTelcelModel.Store.AddEmpleado" />
+    <FunctionImportMapping FunctionImportName="CoincidenciaNombre" FunctionName="ELiconaTelcelModel.Store.CoincidenciaNombre">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ELiconaTelcelModel.CoincidenciaNombre_Result">
+          <ScalarProperty Name="IdEmpleado" ColumnName="IdEmpleado" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdPuesto" ColumnName="IdPuesto" />
+          <ScalarProperty Name="DescripcionPuesto" ColumnName="DescripcionPuesto" />
+          <ScalarProperty Name="IdDepartamento" ColumnName="IdDepartamento" />
+          <ScalarProperty Name="DescripcionDepartamento" ColumnName="DescripcionDepartamento" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DeleteEmpleado" FunctionName="ELiconaTelcelModel.Store.DeleteEmpleado" />
+    <FunctionImportMapping FunctionImportName="GetAllDepartamentos" FunctionName="ELiconaTelcelModel.Store.GetAllDepartamentos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ELiconaTelcelModel.GetAllDepartamentos_Result">
+          <ScalarProperty Name="IdDepartamento" ColumnName="IdDepartamento" />
+          <ScalarProperty Name="DescripcionDepartamento" ColumnName="DescripcionDepartamento" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAllPuestos" FunctionName="ELiconaTelcelModel.Store.GetAllPuestos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ELiconaTelcelModel.GetAllPuestos_Result">
+          <ScalarProperty Name="IdPuesto" ColumnName="IdPuesto" />
+          <ScalarProperty Name="DescripcionPuesto" ColumnName="DescripcionPuesto" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAllEmpleados" FunctionName="ELiconaTelcelModel.Store.GetAllEmpleados">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ELiconaTelcelModel.GetAllEmpleados_Result">
+          <ScalarProperty Name="IdEmpleado" ColumnName="IdEmpleado" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdPuesto" ColumnName="IdPuesto" />
+          <ScalarProperty Name="DescripcionPuesto" ColumnName="DescripcionPuesto" />
+          <ScalarProperty Name="IdDepartamento" ColumnName="IdDepartamento" />
+          <ScalarProperty Name="DescripcionDepartamento" ColumnName="DescripcionDepartamento" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

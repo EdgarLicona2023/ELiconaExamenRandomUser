@@ -1,0 +1,81 @@
+﻿
+@model ML.Empleado
+@{
+    ViewBag.Title = "EmpleadoEliminar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Empleado Eliminar</h2>
+
+
+<div class="container">
+    <section>
+        <h2>Módulo Para Eliminar UN Empleado</h2>
+        <p>
+            En este modulo puedes visualizar a los empleados existentes,<br />
+            asi como el poder eliminarlos
+        </p>
+    </section>
+    
+    <hr />
+    <section>
+        @if (Model.Empleados == null)
+        {
+            <div class="row">
+                <div class="alert alert-danger" role="alert">
+                    @ViewBag.Message
+                </div>
+            </div>
+        }
+        else
+        {
+
+
+            <table class="table table-bordered table-responsive">
+                <thead>
+                    <tr>
+                        @*<td class="text-center" style=" font-weight:bold;">Editar</td>*@
+
+                        <td class="visually-hidden">IdEmpleado</td>
+                        <td class="text-center" style="font-weight:bold;">Empleado</td>
+                     
+                        <td class="visually-hidden">IdPuesto</td>
+                        <td class="text-center" style=" font-weight:bold;">Puesto</td>
+
+                        <td class="visually-hidden">IdDepartamento</td>
+                        <td class="text-center" style=" font-weight:bold;">Departamento</td>
+                      
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (ML.Empleado empleado in Model.Empleados)
+                    {
+                        <tr>
+                            <td class="text-center"><a class="btn btn-warning bi bi-pencil-square" href="@Url.Action("EmpleadoEliminar", "EmpleadoEliminar", new { IdEmpleado = empleado.IdEmpleado })"></a></td>
+
+                            <td class="visually-hidden">@empleado.IdEmpleado</td>
+                            <td class="text-center">@empleado.Nombre</td>
+                         
+
+                            <td class="visually-hidden">@empleado.Puesto.IdPuesto</td>
+                            <td class="text-center">@empleado.Puesto.DescripcionPuesto</td>
+
+                            <td class="visually-hidden">@empleado.Departamento.IdDepartamento</td>
+                            <td class="text-center">@empleado.Departamento.DescripcionDepartamento</td>
+
+                        
+
+
+                            <td class="text-center"><a class="btn btn-danger bi bi-trash" href="@Url.Action("Delete", "EmpleadoEliminar", new { IdEmpleado = empleado.IdEmpleado})" onclick="return confirm('Estas seguro que deseas eliminar este registro?');"></a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        }
+
+
+
+    </section>
+</div>

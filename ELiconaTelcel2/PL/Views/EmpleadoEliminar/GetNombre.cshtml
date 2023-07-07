@@ -1,0 +1,87 @@
+﻿@model ML.Empleado
+@{
+    ViewData["Title"] = "GetNombre";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Busqueda por Nombre</h1>
+
+<div class="container">
+    <div class=row>
+        <div class="text-center">
+        
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h5>Seleccione una Opción para la vista Buscar Empleado...</h5>
+            <hr />
+        </div>
+    </div>
+
+</div>
+
+@using (Html.BeginForm("GetNombre", "EmpleadoEliminar", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="row">
+        <div class="col-md-3">
+            @Html.LabelFor(model => model.Nombre)
+
+            @Html.TextBoxFor(model => model.Nombre, new { @class = "form-control", @id = "txtNombre" })
+
+            @Html.ValidationMessageFor(model => model.Nombre)
+
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col">
+            <input type="submit" value="Buscar" class="btn btn-primary " />
+        </div>
+    </div>
+}
+
+
+
+
+
+
+<div style="float:right;">
+    @Html.ActionLink("Regresar", "GetAll", "EmpleadoEliminar", htmlAttributes: new { @class = "btn btn-primary" })
+
+</div>
+
+<br>
+<br>
+
+<table class="table table-hover table-bordered table-responsive">
+    <thead>
+        <tr class="table-secondary">
+            <td style="display :none;">IdEmpleado</td>
+            <td>Nombre</td>
+            <td style="display :none;">IdPuesto</td>
+            <td>DescripcionPuesto</td>
+            <td style="display :none;">IdDescripcion</td>
+            <td>DescripcionDepartamento</td>
+
+
+        </tr>
+    </thead>
+    <tbody>
+          @foreach (ML.Empleado empleado in Model.Empleados)
+            {
+            <tr>
+
+                <td style="display :none;">@empleado.IdEmpleado </td>
+                <td>@empleado.Nombre </td>
+                <td>@empleado.Puesto.DescripcionPuesto </td>
+                <td>@empleado.Departamento.DescripcionDepartamento </td>
+
+            </tr>
+            }
+        
+    </tbody>
+</table>
+

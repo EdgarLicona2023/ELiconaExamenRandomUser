@@ -118,37 +118,12 @@ namespace PL.Controllers
                         }
                     }
 
-                //    if (result.Correct)
-                //    {
-
-                //        libros = (ML.Libro)result.Object;
-
-                //        //ML.Result resultDepartamento = BL.Libro.GetByIdArea(producto.Departamento.Area.IdArea);
-
-                //        //producto.Proveedor.Proveedores = resultProveedor.Objects;
-                //        //producto.Departamento.Area.Areas = resultArea.Objects;
-                //        //producto.Departamento.Departamentos = resultDepartamento.Objects;
-                //        //return View(producto);
-
-                //    }
-                //    else
-                //    {
-                //        ViewBag.Message = "Ocurrio un error al hacer la consulta del libro " + result.ErrorMessage;
-                //        return View("Modal");
-                //    }
-                //}
-                //catch
-                //{
-
-                //}
+             
                 return View();
             }
         }
 
      
-
-
-
 
         [HttpPost] //metodo con servicios web
         public ActionResult Form(ML.Libro libro)
