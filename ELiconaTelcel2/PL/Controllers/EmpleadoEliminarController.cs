@@ -92,11 +92,8 @@ namespace PL.Controllers
             ML.Result result = BL.Empleado.EmpleadoGetAllNombre(empleado);
             empleado.Empleados = result.Objects;
 
-
-
             return View(empleado);
-           
-
+       
         }
 
         [HttpGet]
