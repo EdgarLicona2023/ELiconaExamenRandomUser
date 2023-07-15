@@ -1,0 +1,110 @@
+﻿@model ML.Pasajero
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Welcome</title>
+	<link rel="stylesheet" href="/css/Login.css">
+	<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+	<label>Login</label>
+</head>
+
+
+<div class="login-wrap">
+	<div class="login-html">
+		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+		<div class="login-form">
+
+			<div class="sign-in-htm">
+
+				@using (Html.BeginForm("Login", "Pasajero", FormMethod.Post, new { enctype = "multipart/form-data" }))
+				{
+					<div class="group">
+						<label for="user" class="label" required="">Correo Electronico</label>
+						<input name="Correo" id="Correo" type="text" class="input" required="">
+					</div>
+					<div class="group">
+						<label for="pass" class="label" required="">Password</label>
+						<input name="Password" id="Password" type="password" class="input" data-type="password" required="">
+					</div>
+					@*<div class="group">
+				<input id="check" type="checkbox" class="check" checked>
+				<label for="check"><span class="icon"></span> Keep me Signed in</label>
+				</div>*@
+					<div class="group">
+						<input type="submit" class="button" value="Sign In">
+					</div>
+					@*<div class="hr"></div>*@
+					@*<div class="foot-lnk">
+				<a href="#forgot">Forgot Password?</a>
+				</div>*@
+				}
+			</div>
+
+
+			<div class="sign-up-htm">
+
+				@using (Html.BeginForm("Login", "Pasajero", FormMethod.Post, new { enctype = "multipart/form-data" }))
+				{
+
+					<div class="group">
+						<label for="user" class="label" required="">Nombre</label>
+						<input name="Nombre" id="Nombre" type="text" class="input" required="">
+					</div>
+
+					<div class="group">
+						<label for="user" class="label" required="">Apellido Paterno</label>
+						<input name="ApellidoPaterno" id="ApellidoPaterno" type="text" class="input" required="">
+					</div>
+
+					<div class="group">
+						<label for="user" class="label" required="">Apellido Materno</label>
+						<input name="ApellidoMaterno" id="ApellidoMaterno" type="text" class="input" required="">
+					</div>
+
+
+					<div class="group">
+						<label for="user" class="label" required="">User Name</label>
+						<input name="UserName" id="Username" type="text" class="input" required="">
+					</div>
+
+					<div class="group">
+						<label for="pass" class="label" required="">Correo Electronico</label>
+						<input name="Correo" id="Correo" type="email" class="input" required="">
+					</div>
+
+					<div class="group">
+						<label for="pass" class="label" required="">Password</label>
+						<input name="Password" id="Password" type="password" class="input" data-type="password" required="">
+					</div>
+					@*<div class="group">
+				<label for="pass" class="label">Repeat Password</label>
+				<input id="pass" type="password" class="input" data-type="password">
+				</div>*@
+
+
+					<div class="hr"></div>
+
+					<div class="group">
+						<input type="submit" class="button" value="Sign Up">
+					</div>
+				}
+
+
+				<div class="foot-lnk">
+					<label for="tab-1">Ya Estas Registrado?</a>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+</div>
+
+</html>
