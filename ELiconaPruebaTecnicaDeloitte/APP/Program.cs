@@ -32,13 +32,13 @@
 							break;
 
 						case 3:
-							Ejercicios.Ejer.VariableTemp();
+							Ejercicios.Ejer.LetrasRepetidas();
 							break;
 						case 4:
 							Ejercicios.Ejer.VariableTemp();
 							break;
 						case 5:
-							Ejercicios.Ejer.VariableTemp();
+							Ejercicios.Ejer.Matriz();
 							break;
 
 						case 0:

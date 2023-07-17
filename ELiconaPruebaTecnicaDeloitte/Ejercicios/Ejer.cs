@@ -62,7 +62,7 @@ namespace Ejercicios
 		}
 
 
-		public static void Main() 
+		public static void LetrasRepetidas() 
 		{
 
 		}
@@ -83,6 +83,11 @@ namespace Ejercicios
 			primera = primera - segunda;
 			Console.WriteLine("Después: " + primera + "" + "" + segunda);
 			
+		}
+
+		public static void Matriz()
+		{
+
 		}
 	}
 }
