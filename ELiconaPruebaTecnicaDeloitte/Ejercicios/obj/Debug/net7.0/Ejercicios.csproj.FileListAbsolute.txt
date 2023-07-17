@@ -1,0 +1,12 @@
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaPruebaTecnicaDeloitte\Ejercicios\obj\Debug\net7.0\Ejercicios.csproj.AssemblyReference.cache
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaPruebaTecnicaDeloitte\Ejercicios\obj\Debug\net7.0\Ejercicios.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaPruebaTecnicaDeloitte\Ejercicios\obj\Debug\net7.0\Ejercicios.AssemblyInfoInputs.cache
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaPruebaTecnicaDeloitte\Ejercicios\obj\Debug\net7.0\Ejercicios.AssemblyInfo.cs
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaPruebaTecnicaDeloitte\Ejercicios\obj\Debug\net7.0\Ejercicios.csproj.CoreCompileInputs.cache
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaPruebaTecnicaDeloitte\Ejercicios\bin\Debug\net7.0\Ejercicios.deps.json
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaPruebaTecnicaDeloitte\Ejercicios\bin\Debug\net7.0\Ejercicios.dll
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaPruebaTecnicaDeloitte\Ejercicios\bin\Debug\net7.0\Ejercicios.pdb
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaPruebaTecnicaDeloitte\Ejercicios\obj\Debug\net7.0\Ejercicios.dll
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaPruebaTecnicaDeloitte\Ejercicios\obj\Debug\net7.0\refint\Ejercicios.dll
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaPruebaTecnicaDeloitte\Ejercicios\obj\Debug\net7.0\Ejercicios.pdb
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiconaPruebaTecnicaDeloitte\Ejercicios\obj\Debug\net7.0\ref\Ejercicios.dll

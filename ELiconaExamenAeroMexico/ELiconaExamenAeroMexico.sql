@@ -20,6 +20,7 @@ Origen VARCHAR(2) NOT NULL,
 Destino VARCHAR(2) NOT NULL,
 FechaSalida Datetime
 )
+INSERT INTO Vuelo VALUES ('1005','44','66',SYSDATETIME())
 
 CREATE PROCEDURE GetAllVuelo 
 AS
@@ -32,9 +33,9 @@ FechaSalida
 FROM Vuelo
 GO
 
-CREATE PROCEDURE GetAllVueloRango
+CREATE PROCEDURE GetAllVueloRango 14-07-2023, 15-07-2023
 @inicio DATE,
-@fin DATE 
+@fin DATE
 AS	
 SELECT 
 IdVuelo,
@@ -43,7 +44,7 @@ Origen,
 Destino,
 FechaSalida
 from Vuelo
-WHERE FechaSalida BETWEEN @inicio @fin
+WHERE FechaSalida BETWEEN '2023-07-14' AND '2023-07-14'
 GO
 
 
