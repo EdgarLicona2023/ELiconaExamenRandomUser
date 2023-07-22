@@ -1,0 +1,151 @@
+﻿@model ML.Producto
+@{
+    ViewBag.Title = "Form";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid">
+
+
+
+    @using (Html.BeginForm("Form", "Producto", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+
+        <div class="row">
+            <div class="col">
+                @Html.LabelFor(model => model.IdProducto, new { @class = "visually-hidden" })
+
+                @Html.TextBoxFor(model => model.IdProducto, new { @class = "visually-hidden form-control" })
+
+                @*@Html.ValidationMessageFor(model => model.IdProducto)*@
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                @Html.Label("", "Producto")
+
+                @Html.TextBoxFor(model => model.NombreProducto, new { @class = "form-control", @id = "txtNombre", @placeholder = "Ejemplo: Telefono,Lavadora, etc.." })
+
+                @Html.ValidationMessageFor(model => model.NombreProducto)
+            </div>
+
+            <div class="col-md-2">
+                @Html.Label("", "Precio")
+
+                @Html.TextBoxFor(model => model.PrecioUnitario, new { @class = "form-control", @id = "txtNombre", @placeholder = "$0.00" })
+
+                @Html.ValidationMessageFor(model => model.PrecioUnitario)
+            </div>
+
+
+            <div class="col-md-6">
+                @Html.Label("", "Cantidad")
+
+                @Html.TextBoxFor(model => model.Stock, new { @class = "form-control", @id = "txtNombre", @placeholder = "Cuantos Existen" })
+
+                @Html.ValidationMessageFor(model => model.Stock)
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-10">
+                @Html.Label("", "Detalles")
+
+                @Html.TextBoxFor(model => model.Descripcion, new { @class = "form-control", @id = "txtNombre", @placeholder = "Es de tipo tal..." })
+
+                @Html.ValidationMessageFor(model => model.Descripcion)
+            </div>
+
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                @Html.Label("", "Proveedor")
+
+                @*@Html.TextBoxFor(model => model.Proveedor.IdProveedor, new { @class = "form-control", @id = "txtNombre", @placeholder = "2.Wirpool,3.Samsung,4.CH..." })*@
+
+                @Html.DropDownListFor(model => model.Proveedor.IdProveedor, new SelectList(Model.Proveedor.Proveedors, "IdProveedor", "NombreProveedor"), "Selecciona una Opcion", new { @class = "form-control", @id = "ddlProveedor" })
+
+                @Html.ValidationMessageFor(model => model.Proveedor.IdProveedor)
+            </div>
+
+
+            <div class="col-auto">
+                @Html.Label("", "Area")
+
+
+                @Html.DropDownListFor(model => model.Departamento.Area.IdArea, new SelectList(Model.Departamento.Area.Areas, "IdArea", "NombreArea"), "Selecciona una opción", new { @class = "form-control", @id = "ddlArea" })
+
+
+                @Html.ValidationMessageFor(model => model.Departamento.Area)
+            </div>
+
+
+
+            @if (Model.Departamento.Departamentos == null)
+            {
+                <div class="col-md-3">
+                    @Html.LabelFor(model => model.Departamento)
+                    @Html.DropDownListFor(model => Model.Departamento.IdDepartamento, new SelectList(string.Empty, "Value", "Text"), "Selecciona una opción", new { @class = "form-control", @id = "ddlDepartamento" })
+                </div>
+            }
+            else
+            {
+                <div class="col-auto">
+                    @Html.Label("", "Departamento")
+
+
+                    @Html.DropDownListFor(model => model.Departamento.IdDepartamento, new SelectList(Model.Departamento.Departamentos, "IdDepartamento", "NombreDepartamento"), "Selecciona una opción", new { @class = "form-control", @id = "ddlDepartamento" })
+
+
+                    @Html.ValidationMessageFor(model => model.Departamento)
+                </div>
+            }
+
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <input type="submit" value="Guardar" class="btn btn-success" />
+                @Html.ActionLink("Regresar", "GetAll", "Producto", htmlAttributes: new { @class = "btn btn-danger" })
+            </div>
+
+        </div>
+
+    }
+
+</div>
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#ddlArea").change(function () {
+            $("#ddlDepartamento").empty();
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("DepartamentoGetByIdArea")',
+                dataType: 'json',
+                data: { IdArea: $("#ddlArea").val() },
+                success: function (departamentos) {
+                    $("#ddlDepartamento").append('<option value="0">' + 'Seleccione una opción' + '</option>');
+                    $.each(departamentos, function (i, departamentos) {
+                        $("#ddlDepartamento").append('<option value="' + departamentos.idDepartamento + '">' + departamentos.nombreDepartamento + '</option>');
+                    });
+                },
+                error: function (ex) {
+                    $("#ddlDepartamento").empty();
+                    $("#ddlDepartamento").append('<option value="0">' + 'Seleccione una opción' + '</option>');
+                }
+            });
+        });
+    });
+
+</script>
+

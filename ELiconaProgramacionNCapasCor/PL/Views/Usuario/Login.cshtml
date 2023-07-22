@@ -1,0 +1,51 @@
+﻿@model ML.Usuario
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<link rel="stylesheet" href="/css/Login.css">
+	<title>Login</title>
+
+</head>
+
+<body>
+
+<div class="container">
+
+	 @using (Html.BeginForm("Login", "Usuario", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+
+	<div class="body"></div>
+	<div class="grad"></div>
+	<div class="header">
+		<div>Site<span>User</span></div>
+	</div>
+	<br>
+	<div class="login">
+	       	@Html.TextBoxFor(model => model.Email, new { @class = "", @type="text",@placeholder="Usuario"})<br>
+			@Html.TextBoxFor(model => model.Password, new { @class = "", @type="password",@placeholder="Password"})<br>
+
+				<input type="submit" value="Login" class="">
+	</div>
+
+
+	@*<div class="body"></div>
+	<div class="grad"></div>
+	<div class="header">
+		<div>Site<span>User</span></div>
+	</div>
+	<br>
+	<div class="login">
+		<input type="text" placeholder="User" name="userName"><br>
+		<input type="password" placeholder="Password" name="password"><br>
+		<input type="button" value="Login" class="">
+	</div>*@
+	}
+	</div>
+</body>
+</html>
