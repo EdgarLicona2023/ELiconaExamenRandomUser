@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace ML
 {
-	internal class PasajeroVuelo
+	public class PasajeroVuelo
 	{
+		public int IdUsuarioVuelos { get; set; }
+		public Pasajero Pasajero { get; set; }
+		public Vuelo Vuelo { get; set; }
+		public List<Object> PasajerosVuelos { get; set; }
 	}
 }

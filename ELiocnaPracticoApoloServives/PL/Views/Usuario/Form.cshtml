@@ -1,0 +1,221 @@
+﻿@model ML.Usuario
+@{
+    ViewData["Title"] = "Form";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid">
+
+
+
+    @using (Html.BeginForm("Form", "Producto", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+
+        <div class="row">
+            <div class="col">
+                @Html.LabelFor(model => model.IdUser, new { @class = "visually-hidden" })
+
+                @Html.TextBoxFor(model => model.IdUser, new { @class = "visually-hidden form-control" })
+
+                @*@Html.ValidationMessageFor(model => model.IdProducto)*@
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                @Html.Label("", "Usuario")
+
+                @Html.TextBoxFor(model => model.UserName, new { @class = "form-control", @id = "txtUsername", @placeholder = "NickName" })
+
+                @Html.ValidationMessageFor(model => model.UserName)
+            </div>
+
+            <div class="col-md-4">
+                @Html.Label("", "Nombre")
+
+                @Html.TextBoxFor(model => model.Nombre, new { @class = "form-control", @id = "txtNombre", @placeholder = "Nombre(s)" })
+
+                @Html.ValidationMessageFor(model => model.Nombre)
+            </div>
+
+            <div class="col-md-4">
+                @Html.Label("", "Apellido Paterno")
+
+                @Html.TextBoxFor(model => model.ApellidoPaterno, new { @class = "form-control", @id = "txtAP", @placeholder = "Primer Apellido" })
+
+                @Html.ValidationMessageFor(model => model.ApellidoPaterno)
+            </div>
+            <div class="col-md-4">
+                @Html.Label("", "Apellido Materno")
+
+                @Html.TextBoxFor(model => model.ApellidoMaterno, new { @class = "form-control", @id = "txtAM", @placeholder = "Segundo Apellido" })
+
+                @Html.ValidationMessageFor(model => model.ApellidoMaterno)
+            </div>
+
+            <div class="col-md-2">
+                @Html.Label("", "E-mail")
+
+                @Html.TextBoxFor(model => model.Email, new { @class = "form-control", @id = "txtEmail", @placeholder = "Correo Electronico" })
+
+                @Html.ValidationMessageFor(model => model.Email)
+            </div>
+
+
+            <div class="col-md-6">
+                @Html.Label("", "Password")
+
+                @Html.TextBoxFor(model => model.Password, new { @class = "form-control", @id = "txtPassword", @placeholder = "Crea Contraseña" })
+
+                @Html.ValidationMessageFor(model => model.Password)
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-10">
+                @Html.Label("", "Fecha Nacimiento")
+
+                @Html.TextBoxFor(model => model.FechaNacimiento, new { @class = "form-control", @id = "txtFechaNacimiento", @placeholder = "DD-MM-YYYY", @autocomplete = "off" })
+
+                @Html.ValidationMessageFor(model => model.FechaNacimiento)
+            </div>
+
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-10">
+                @Html.Label("", "Telefono")
+
+                @Html.TextBoxFor(model => model.Telefono, new { @class = "form-control", @id = "txtTelefono", @placeholder = "Numero Cel."})
+                @Html.ValidationMessageFor(model => model.Telefono)
+            </div>
+
+
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-6">
+                @Html.Label("", "Imagen")
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user-plus"></i></span>
+                    <input id="inpImagen" type='file' class="form-control" name="inpImagen" onchange="validateFile(this), visualizarImagen(this);  " />
+                </div>
+              
+                    <img id="Img" src="data:image/*;base64,@Model.Imagen" style="width:250px ; height:250px" />
+            </div>
+        </div>
+
+
+
+
+
+        <div class="row">
+            <div class="col-md-4">
+                @Html.Label("", "Sexo")
+
+                @Html.DropDownListFor(model => model.Sexo.IdSexo, new SelectList(Model.Sexo.Sexoss, "IdSexo", "Sexos"), "Selecciona una Opcion", new { @class = "form-control", @id = "ddlSexo" })
+
+                @Html.ValidationMessageFor(model => model.Sexo.IdSexo)
+            </div>
+
+           @* <div class="col-md-4">
+                @Html.Label("", "Estado Civil")
+
+                @Html.DropDownListFor(model => model.EstadoCivil.IdEstadoCivil, new SelectList(Model.EstadoCivil.EstadoCivill, "IdEstadoCivil", "EstadoCivill"), "Selecciona una Opcion", new { @class = "form-control", @id = "ddlEstadoCivil" })
+
+                @Html.ValidationMessageFor(model => model.EstadoCivil.IdEstadoCivil)
+            </div>*@
+
+
+            <div class="col-md-4">
+                @Html.Label("", "Puesto")
+
+
+                @Html.DropDownListFor(model => model.Puesto.IdPuesto, new SelectList(Model.Puesto.Puestoss, "IdPuesto", "Puestos"), "Selecciona una Opcion", new { @class = "form-control", @id = "ddlPuesto" })
+
+                @Html.ValidationMessageFor(model => model.Puesto.IdPuesto)
+            </div>
+
+
+
+
+
+            <div class="col-auto">
+                @Html.Label("", "Area")
+
+
+                @Html.DropDownListFor(model => model.Departamento.Areas.IdArea, new SelectList(Model.Departamento.Areas.Areass, "IdArea", "Areas"), "Selecciona una opción", new { @class = "form-control", @id = "ddlArea" })
+
+
+                @Html.ValidationMessageFor(model => model.Departamento.Areas)
+            </div>
+
+
+
+            @if (Model.Departamento.Departamentoss == null)
+            {
+                <div class="col-md-3">
+                    @Html.LabelFor(model => model.Departamento)
+                    @Html.DropDownListFor(model => Model.Departamento.IdDepartamento, new SelectList(string.Empty, "Value", "Text"), "Selecciona una opción", new { @class = "form-control", @id = "ddlDepartamento" })
+                </div>
+            }
+            else
+            {
+                <div class="col-auto">
+                    @Html.Label("", "Departamento")
+
+
+                    @Html.DropDownListFor(model => model.Departamento.IdDepartamento, new SelectList(Model.Departamento.Departamentoss, "IdDepartamento", "Departamentos"), "Selecciona una opción", new { @class = "form-control", @id = "ddlDepartamento" })
+
+
+                    @Html.ValidationMessageFor(model => model.Departamento)
+                </div>
+            }
+
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <input type="submit" value="Guardar" class="btn btn-success" />
+                @Html.ActionLink("Regresar", "GetAllUsuario", "Usuario", htmlAttributes: new { @class = "btn btn-danger" })
+            </div>
+
+        </div>
+
+    }
+
+</div>
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#ddlArea").change(function () {
+            $("#ddlDepartamento").empty();
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("DepartamentoGetBYIdArea")',
+                dataType: 'json',
+                data: { IdArea: $("#ddlArea").val() },
+                success: function (departamentos) {
+                    $("#ddlDepartamento").append('<option value="0">' + 'Seleccione una opción' + '</option>');
+                    $.each(departamentos, function (i, departamentos) {
+                        $("#ddlDepartamento").append('<option value="' + departamentos.idDepartamento + '">' + departamentos.Departamentos + '</option>');
+                    });
+                },
+                error: function (ex) {
+                    $("#ddlDepartamento").empty();
+                    $("#ddlDepartamento").append('<option value="0">' + 'Seleccione una opción' + '</option>');
+                }
+            });
+        });
+    });
+
+</script>
+

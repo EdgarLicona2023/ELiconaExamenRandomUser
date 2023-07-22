@@ -1,0 +1,14 @@
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiocnaPracticoApoloServives\DLL\bin\Debug\net7.0\DLL.deps.json
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiocnaPracticoApoloServives\DLL\bin\Debug\net7.0\DLL.runtimeconfig.json
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiocnaPracticoApoloServives\DLL\bin\Debug\net7.0\DLL.dll
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiocnaPracticoApoloServives\DLL\bin\Debug\net7.0\DLL.pdb
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiocnaPracticoApoloServives\DLL\obj\Debug\net7.0\DLL.csproj.AssemblyReference.cache
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiocnaPracticoApoloServives\DLL\obj\Debug\net7.0\DLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiocnaPracticoApoloServives\DLL\obj\Debug\net7.0\DLL.AssemblyInfoInputs.cache
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiocnaPracticoApoloServives\DLL\obj\Debug\net7.0\DLL.AssemblyInfo.cs
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiocnaPracticoApoloServives\DLL\obj\Debug\net7.0\DLL.csproj.CoreCompileInputs.cache
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiocnaPracticoApoloServives\DLL\obj\Debug\net7.0\DLL.dll
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiocnaPracticoApoloServives\DLL\obj\Debug\net7.0\refint\DLL.dll
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiocnaPracticoApoloServives\DLL\obj\Debug\net7.0\DLL.pdb
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiocnaPracticoApoloServives\DLL\obj\Debug\net7.0\DLL.genruntimeconfig.cache
+C:\Users\digis\Documents\LiconaGrandeEdgarAlejandro\Repositorio\ELiocnaPracticoApoloServives\DLL\obj\Debug\net7.0\ref\DLL.dll
